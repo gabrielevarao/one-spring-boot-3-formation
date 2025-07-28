@@ -11,7 +11,7 @@
 	<groupId>med.voll</groupId>
 	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>apii</name>
+	<name>api</name>
 	<description>API Rest da aplicação Voll.med</description>
 	<url/>
 	<licenses>
