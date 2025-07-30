@@ -75,5 +75,13 @@ public class Medico {
         return especialidade;
     }
 
+    public Endereco getEndereco(){
+        return endereco;
+    }
+
+    public String getTelefone(){
+        return telefone;
+    }
+
 
 }

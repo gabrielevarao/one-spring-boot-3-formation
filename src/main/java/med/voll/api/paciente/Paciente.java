@@ -68,4 +68,12 @@ public class Paciente {
     public String getCpf() {
         return cpf;
     }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
 }
