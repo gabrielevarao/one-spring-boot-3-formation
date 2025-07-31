@@ -24,7 +24,6 @@ public class TokenService {
         } catch (JWTCreationException exception) {
             throw new RuntimeException("Erro ao gerrar token jwt", exception);
         }
-
     }
 
     public Instant dataExpiracao(){
