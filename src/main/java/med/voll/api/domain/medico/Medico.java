@@ -1,9 +1,8 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.*;
-import med.voll.api.endereco.Endereco;
+import med.voll.api.domain.endereco.Endereco;
 
 @Getter
 @NoArgsConstructor
@@ -54,34 +53,5 @@ public class Medico {
     public void excluir() {
         this.ativo = false;
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getCrm() {
-        return crm;
-    }
-
-    public Especialidade getEspecialidade() {
-        return especialidade;
-    }
-
-    public Endereco getEndereco(){
-        return endereco;
-    }
-
-    public String getTelefone(){
-        return telefone;
-    }
-
 
 }
