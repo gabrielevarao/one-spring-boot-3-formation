@@ -14,4 +14,6 @@ import java.time.LocalDateTime;
 public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
 
     boolean existisByMedicoIdAndData(Long IdMedico, LocalDateTime data);
+
+    boolean existsByPacientIdAndDataBetween(@NotNull Long idPaciente, LocalDateTime primeiroHorario, LocalDateTime ultimoHorario);
 }
