@@ -29,7 +29,7 @@ public class ConsultaService {
     @Autowired
     private List<ValidadorCancelamentoDeConsulta> validadoresCancelamento;
 
-    public DadosDetalhamentoConsulta agendar (DadosAgendamentoConsulta dados){
+    public DadosDetalhamentoConsulta agendar (DadosAgendamentoConsulta dados) {
         if (!pacienteRepository.existsById(dados.idPaciente())){
             throw new ValidacaoException("Id do paciente informado não existe!");
         }
