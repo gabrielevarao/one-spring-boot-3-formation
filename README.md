@@ -7,16 +7,12 @@
 Atividade desenvolvida na _Formação Spring Boot 3_.
 Esta aplicação simula o back-end de uma API para uma clínica médica fictícia chamada Voll.med. 
 
----
-
 ## ⚙️ Funcionalidades
 
 - [x] CRUD de médicos;
 - [x] CRUD de pacientes;
 - [x] Agendamento de consultas;
 - [x] Cancelamento de consultas.
-
----
 
 ## 🛠 Tecnologias
 
@@ -30,20 +26,16 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 - **[Flyway](https://flywaydb.org)**
 - **[Lombok](https://projectlombok.org)**
 
----
-
 ## 📚 Contexto
 Este projeto foi desenvolvido no decorrer de três cursos obrigatórios para a conclusão da _Formação Java e Spring Framework_ da especialização Back-end Java + IA do Programa ONE (Oracle Next Education):
 - Spring Boot 3: desenvolva uma API Rest em Java
 - Spring Boot 3: aplique boas práticas e proteja uma API Rest
 - Spring Boot 3: documente, teste e prepare uma API para o deploy
 
----
-
 ## 📝 Licença do código-base
-
-[Alura](https://www.alura.com.br).
-
+[Alura](https://www.alura.com.br).\
 Instrutor: [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira)
+
+_Esta aplicação seguiu o código cuja atribuição foi mencionada acima, no entanto foi modificada adicionando dependências mais atualizadas, substituindo métodos obsoletos e aplicando, sempre que possível, boas práticas de escrita de código._
 
 ---
