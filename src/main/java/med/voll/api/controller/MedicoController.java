@@ -1,7 +1,6 @@
 package med.voll.api.controller;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import med.voll.api.domain.medico.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +8,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
 
 @RestController
 @RequestMapping("/medicos")
@@ -27,14 +26,16 @@ public class MedicoController {
         var dadosMedico = new Medico(medico);
         medicoRepository.save(dadosMedico);
 
-        var uri = uriBuilder.path("/medicos/{id}").buildAndExpand(dadosMedico.getId()).toUri();
+        var uri = uriBuilder.path("/medicos/{id}")
+                            .buildAndExpand(dadosMedico.getId()).toUri();
 
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(dadosMedico));
     }
 
     @GetMapping
     public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
-        var page = medicoRepository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
+        var page = medicoRepository.findAllByAtivoTrue(paginacao)
+                                   .map(DadosListagemMedico::new);
 
         return ResponseEntity.ok(page);
     }
@@ -63,6 +64,5 @@ public class MedicoController {
 
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
     }
-
 
 }
